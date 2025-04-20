@@ -803,11 +803,11 @@ body {
     }
 
     // Example usage:
-    applyParallaxEffect('.corner-icon', 80, './images/OrangeIcons/AdarshlogoOrange.svg', 'images/AdarshLogo.svg');
-    applyParallaxEffect('.vector-113', 40, 'images/OrangeIcons/vector-113org.svg', 'images/vector-113.svg');
-    applyParallaxEffect('.vector-114', 30, 'images/OrangeIcons/vector-114org.svg', 'images/vector-114.svg');
-    applyParallaxEffect('.vector-115', 30, 'images/OrangeIcons/vector-115org.svg', 'images/vector-115.svg');
-    applyParallaxEffect('.vector-116', 30, 'images/OrangeIcons/vector-116org.svg', 'images/vector-116.svg');
+    applyParallaxEffect('.corner-icon', 80, 'images/orangeIcons/AdarshlogoOrange.svg', 'images/AdarshLogo.svg');
+    applyParallaxEffect('.vector-113', 40, 'images/orangeIcons/vector-113org.svg', 'images/vector-113.svg');
+    applyParallaxEffect('.vector-114', 30, 'images/orangeIcons/vector-114org.svg', 'images/vector-114.svg');
+    applyParallaxEffect('.vector-115', 30, 'images/orangeIcons/vector-115org.svg', 'images/vector-115.svg');
+    applyParallaxEffect('.vector-116', 30, 'images/orangeIcons/vector-116org.svg', 'images/vector-116.svg');
 
 
     //hide circle on About
@@ -816,7 +816,6 @@ body {
         Menu.style.cursor = 'pointer'; 
         circleElement.style.width = '0px';
         circleElement.style.height = '0px'; // Show hand cursor
-        if (hoverImageSrc) Menu.src = hoverImageSrc; // Change image on hover
       });
 
       Menu.addEventListener('mouseleave', () => {
@@ -824,7 +823,6 @@ body {
         Menu.style.cursor = 'default'; // Revert cursor
         circleElement.style.width = '40px';
         circleElement.style.height = '40px';
-        if (originalImageSrc) Menu.src = originalImageSrc; // Revert image
       });
 
     // Parallax effect for text and image
