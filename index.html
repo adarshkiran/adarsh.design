@@ -110,10 +110,21 @@
       </div>
     </div>
     <div class="node-4">
-      <div class="image-container">
+      <div class="image-container-node4">
         <img src="images/4thImage.png" class="4thImage" alt="4thImage" />
+        <div class="overlay-node4"></div>
+        <section class = "overlay-text-secondary-node4">
+          <p class="text-28-node4" style="position: relative; top: -2em; font-family: 'Poppins', sans-serif;"><span class="text-rgb-183-171-152">About Me</span></p>
+          <p class="text-27-node4" data-bg-color="#312d26" data-fg-color="#b7ab98">
+            <span class="text-rgb-183-171-152-1-node4">I'm an artist from India with over 13 years of</span>
+            <span class="text-rgb-255-98-0-1-node4">creative industry experience.</span>
+            <span class="text-rgb-183-171-152-1-node4" style="margin-top: 3%;">I hold a Bachelor of Fine Arts in Applied Arts. My goal is to turn business ideas into strong concepts and build user-friendly, high-quality digital experiences. I focus on creating innovative, intuitive, and visually appealing designs by using new styles and methods.</span><br>
+            <span class="text-rgb-183-171-152-1-node4" style="margin-top: 3%;">Apart from work I like to trek and explore the mountains.</span>
+          </p>
+        </section>
       </div>
     </div>
+
   </div>
   
   
@@ -204,6 +215,17 @@
     background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
     pointer-events: none; /* Allows clicks to pass through */
   }
+
+  .overlay-node4 {
+    position: absolute;
+    top: 348%;
+    left: 0;
+    width: 103%;
+    height: 118%;
+    background-color: rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+}
+  
 
   /* Responsive overlay text adjustments */
   .overlay-text {
@@ -329,6 +351,15 @@
     transform: translate(-50%, -50%);
     font-size: 6vw; /* Use vw for responsive font size */
     width: 60%; /* Adjust width for better responsiveness */
+}
+
+.overlay-text-secondary-node4 {
+    position: absolute;
+    top: 200.5vw;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    font-size: 2vw;
+    width: 60%;
 }
 
   @media (max-width: 768px) {
