@@ -336,6 +336,21 @@ img {
   color: var(--text-rgb-183-171-152);
 }
 
+.text-27-node4 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-size: 104%;
+  text-decoration: none;
+  color: var(--text-rgb-183-171-152);
+  color: var(--text-rgb-255-98-0);
+  font-weight: normal;
+  letter-spacing: -4%;
+  line-height: 143%;
+  text-transform: none;
+  color: var(--text-rgb-183-171-152);
+}
+
 .text-28 {
   flex-grow: 0;
   flex-shrink: 1;
