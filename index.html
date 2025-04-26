@@ -75,7 +75,35 @@
         <section class = "overlay-text-secondary-node3">
           <p class="text-28" style="position: relative; top: -16em; font-family: 'Poppins', sans-serif;"><span class="text-rgb-183-171-152">What I Do</span></p>
           <!--<p class="text-34" style="position: relative; top: -3.7em;"><span class="text-rgb-22-21-20" style="color: #b7ab98;">Visual</span></p>-->
-          <div class="container">
+          <div class="work-top-container">
+            <div class="work-top-item">
+              <span class="work-top-text">visual</span>
+              <span class="work-top-hover">visual</span>
+              <span class="work-top-hover-text">I explore the internet for visual references and blend them together to create my own unique work.</span>
+            </div>
+            <div class="work-top-item">
+              <span class="work-top-text">motion</span>
+              <span class="work-top-hover">motion</span>
+              <span class="work-top-hover-text">I use motion to make my designs feel more dynamic than they actually are, bringing them to life.</span>
+            </div>
+            <div class="work-top-item">
+              <span class="work-top-text">product</span>
+              <span class="work-top-hover">product</span>
+              <span class="work-top-hover-text">I stick to solid design principles, test things out, tweak a bunch… and cross my fingers it works.</span>
+            </div>
+            <div class="work-top-item">
+              <span class="work-top-text">illustration</span>
+              <span class="work-top-hover">illustration</span>
+              <span class="work-top-hover-text">Illustrate with intention, combining imagination with just enough detail to tell a story that feels alive.</span>
+            </div>
+            <div class="work-top-item">
+              <span class="work-top-text">photography</span>
+              <span class="work-top-hover">photography</span>
+              <span class="work-top-hover-text">I'm passionate about photography, trekking mountains, and meeting new people, capturing moments along the journey.</span>
+            </div>
+          </div>
+
+          <!--<div class="container">
             <h1 class="text-34" style="position: relative; top: -2.5em; color: #b7ab98">
               visual
             </h1>
@@ -103,10 +131,10 @@
               <span class="hover-text">I'm passionate about photography, trekking mountains, and meeting new people, capturing moments along the journey.</span>
             </h1>
 
-            <!--<h1 class="text-34" style="position: relative; top: -3.7em;">CRAZYYY<span>CRAZYYY</span></h1>
+            <h1 class="text-34" style="position: relative; top: -3.7em;">CRAZYYY<span>CRAZYYY</span></h1>
             <h1 class="text">HOVER ON ME<span><a href="https://stacksorted.com/text-effects/minh-pham" target="_blank">SOURCE</a></span></h1>
-            <h1 class="text">LIKE THIS?<span><a href="https://twitter.com/juxtopposed" target="_blank">LET'S CONNECT</a></span></h1> -->
-          </div>
+            <h1 class="text">LIKE THIS?<span><a href="https://twitter.com/juxtopposed" target="_blank">LET'S CONNECT</a></span></h1>
+          </div>-->
         </section>
       </div>
     </div>
@@ -294,7 +322,7 @@
 
   .overlay-node4 {
     position: absolute;
-    top: 325%;
+    top: 303%;
     left: 0;
     width: 100%;
     height: 115%;
@@ -912,6 +940,12 @@ body {
     align-items: center;
   }
 
+  .work-top-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .Main-container {
     display: flex;
     flex-wrap: wrap;
@@ -948,6 +982,57 @@ body {
       width: 80%;
     }
   }
+
+  .work-top-text  {
+    font-size: 5.5vw;
+    font-weight: 600;
+    letter-spacing: -.060em;
+    min-width: 165px;
+    width: 53vw;
+    display: inline-block;
+    justify-content: flex-start;
+    text-align: left;
+    line-height: 110%;
+    padding-left: 423px;
+    text-transform: uppercase;
+    position: relative; 
+  }
+
+  .work-top-hover-text {
+    position: absolute;
+    font-size: 0.8vw;
+    color: #161718;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    left: 57.4%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 31vw;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 1.4;
+    text-transform: none;
+  }
+
+  .work-top-item {
+    font-size: 4vw;
+    letter-spacing: -.060em;
+    line-height: 85%;
+    margin: 0;
+    width: 175%;
+    color: #b7ab98;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #2F2B28;
+    position: relative;
+    font-weight: 600;
+    padding: 10px 0;
+    top: -3.5em;
+    left: 2vw;
+}
+
+
 
   /* Add new CSS for history section */
   .history-item {
@@ -1008,7 +1093,32 @@ body {
     padding-left: 117.5%;
   }
 
+  .work-top-hover {
+    position: absolute;
+    letter-spacing: -.060em;
+    width: 260%;
+    height: 85%;
+    background-color: #FF6200;
+    color: #0D0D0D;
+    clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    transform-origin: center;
+    transition: all cubic-bezier(.1,.5,.5,1) 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    left: -98.5%;
+    font-size: 5.5vw;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 117.5%;
+    text-transform: uppercase;
+}
+
   .history-item:hover .history-hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .work-top-item:hover .work-top-hover {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 
@@ -1027,14 +1137,21 @@ body {
     letter-spacing: normal;
     line-height: 1.4;
     text-transform: none;
-}
+  }
 
   .history-item:hover .history-hover-text {
     opacity: 1;
   }
 
+  .work-top-item:hover .work-top-hover-text {
+    opacity: 1;
+  }
+
   @media (max-width: 768px) {
     .history-item {
+      font-size: 7vw;
+    }
+    .work-top-item {
       font-size: 7vw;
     }
     .history-title {
@@ -1050,11 +1167,21 @@ body {
     .history-item {
       font-size: 8vw;
     }
+    .work-top-item {
+      font-size: 8vw;
+    }
     .history-title {
       font-size: 0.3em;
       margin-left: 30px;
     }
+    .work-top-title {
+      font-size: 0.3em;
+      margin-left: 30px;
+    }
     .history-hover-text {
+      font-size: 1.2vw;
+    }
+    .work-top-hover-text {
       font-size: 1.2vw;
     }
   }
@@ -1066,7 +1193,23 @@ body {
     margin-left: -11vw;
   }
 
+  .work-top-title-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: -11vw;
+  }
+
   .history-title {
+    font-size: 2vw;
+    letter-spacing: -1px;
+    color: #b7ab98;
+    font-weight: 500;
+    display: inline-block;
+    white-space: nowrap;
+    margin-left: 0;
+  }
+
+  .work-top-title {
     font-size: 2vw;
     letter-spacing: -1px;
     color: #b7ab98;
@@ -1086,11 +1229,24 @@ body {
     white-space: nowrap;
   }
 
+  .work-top-company {
+    font-size: 1vw;
+    letter-spacing: normal;
+    color: #666;
+    font-weight: 400;
+  }
+
   @media (max-width: 768px) {
     .history-title-container {
       margin-left: 50px;
     }
     .history-company {
+      font-size: 0.2em;
+    }
+    .work-top-title-container {
+      margin-left: 50px;
+    }
+    .work-top-company {
       font-size: 0.2em;
     }
   }
@@ -1100,6 +1256,12 @@ body {
       margin-left: 30px;
     }
     .history-company {
+      font-size: 0.18em;
+    }
+    .work-top-title-container {
+      margin-left: 30px;
+    }
+    .work-top-company {
       font-size: 0.18em;
     }
   }
