@@ -340,13 +340,13 @@ img {
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
-  font-size: 104%;
+  font-size: 180%;
   text-decoration: none;
   color: var(--text-rgb-183-171-152);
   color: var(--text-rgb-255-98-0);
-  font-weight: normal;
-  letter-spacing: -4%;
-  line-height: 143%;
+  font-weight: 500;
+  letter-spacing: -0.10vw;
+  line-height: 112%;
   text-transform: none;
   color: var(--text-rgb-183-171-152);
 }
@@ -355,7 +355,7 @@ img {
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
-  font-size: 18%;
+  font-size: 1vw;
   letter-spacing: 5px;
   text-decoration: none;
   text-transform: uppercase;
