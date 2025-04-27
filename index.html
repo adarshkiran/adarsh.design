@@ -38,7 +38,6 @@
               <p class="text-17" data-hover="About"><span class="text-rgb-183-171-152">About</span></p><br>
               <p class="text-18" data-hover="Work"><span class="text-rgb-92-86-76">Work</span></p><br>
               <p class="text-19" data-hover="Contact"><span class="text-rgb-92-86-76">Contact</span></p><br>
-              <p class="text-19" data-hover="Store"><span class="text-rgb-92-86-76">Store</span></p>
             </div>
             <div class="icon-column">
               <img src="images/vector-113.svg" class="vector-113" alt="vector" />
@@ -1780,6 +1779,53 @@ body {
     //});
 
     
+    
+  </script>
+
+  <script>
+    const text18Element = document.querySelector('.text-18'); 
+    const text17Element = document.querySelector('.text-17');
+    const node4Element = document.querySelector('.node-4');
+    const node2Element = document.querySelector('.node-2');
+    const profileIconElement = document.querySelector('.corner-icon'); 
+    const node1Element = document.querySelector('.node-1');
+
+    //icon links
+    const vector113Element = document.querySelector('.vector-113');
+    const vector114Element = document.querySelector('.vector-114');
+    const vector115Element = document.querySelector('.vector-115');
+    const vector116Element = document.querySelector('.vector-116');
+
+
+
+    text18Element.addEventListener('click', () => {
+        node4Element.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    text17Element.addEventListener('click', () => {
+        node2Element.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    profileIconElement.addEventListener('click', () => {
+      node1Element.scrollIntoView({ behavior: 'smooth' });
+    });
+
+
+    vector113Element.addEventListener('click', () => {
+        window.open('https://dribbble.com/adarshkiran', '_blank'); // Opens the URL in a new tab
+    });
+
+    vector114Element.addEventListener('click', () => {
+      window.open('https://www.instagram.com/adarshkiran89/', '_blank'); // Opens the URL in a new tab
+    });
+
+    vector115Element.addEventListener('click', () => {
+      window.open('https://www.behance.net/adarshkiran', '_blank');    // Opens the URL in a new tab
+    });
+
+    vector116Element.addEventListener('click', () => {
+      window.open('https://www.linkedin.com/in/adarsh-kiran-narayanadas-28ab7165/', '_blank'); // Opens the URL in a new tab
+    });
     
   </script>
 </body>
