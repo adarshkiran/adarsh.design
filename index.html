@@ -35,9 +35,9 @@
               <img src="images/AdarshLogo.svg" class="corner-icon" alt="corner-icon" />
             </div>
             <div class="top-right-text SMN_effect-31" id="menu">
-              <p class="text-17" data-hover="About"><span class="text-rgb-183-171-152">About</span></p><br>
-              <p class="text-18" data-hover="Work"><span class="text-rgb-92-86-76">Work</span></p><br>
-              <p class="text-19" data-hover="Contact"><span class="text-rgb-92-86-76">Contact</span></p><br>
+              <p class="text-17" data-hover="About"><span class="text-rgb-183-171-152" id="text-17-hover">About</span></p><br>
+              <p class="text-18" data-hover="Work"><span class="text-rgb-92-86-76" id="text-18-hover" >Work</span></p><br>
+              <p class="text-19" data-hover="Contact"><span class="text-rgb-92-86-76" id="text-19-hover">Contact</span></p><br>
             </div>
             <div class="icon-column">
               <img src="images/vector-113.svg" class="vector-113" alt="vector" />
@@ -70,7 +70,7 @@
     <div class="node-3">
       <div class="image-container">
         <img src="images/image-2-13.png" class="image-2-13" alt="image-2" />
-        <div class="overlay" style="background-color: black; width: 100%; height: 100%;"></div>
+        <div class="overlay" style="background-color: #060606; width: 100%; height: 100%;"></div>
         <section class = "overlay-text-secondary-node3">
           <p class="text-28" style="position: relative; top: -16em; font-family: 'Poppins', sans-serif;"><span class="text-rgb-183-171-152">What I Do</span></p>
            <!--<p class="text-34" style="position: relative; top: -3.7em;"><span class="text-rgb-22-21-20" style="color: #b7ab98;">Visual</span></p>-->
@@ -152,7 +152,7 @@
     <div class="node-5">
       <div class="image-container">
         <img src="images/image-2-13.png" class="image-2-13" alt="image-2" />
-        <div class="overlay" style="background-color: black; width: 100%; height: 100%;"></div>
+        <div class="overlay" style="background-color: #060606; width: 100%; height: 100%;"></div>
         <section class="overlay-text-secondary-node5">
           <p class="text-28" style="position: relative; top: -2em; font-family: 'Poppins', sans-serif;"><span class="text-rgb-183-171-152">HISTORY</span></p>
           <div class="container">
@@ -230,7 +230,7 @@
     <div class="node-7">
       <div class="image-container">
         <img src="images/image-2-13.png" class="image-2-13" alt="image-2" />
-        <div class="overlay" style="background-color: black; width: 100%; height: 100%;"></div>
+        <div class="overlay" style="background-color: #060606; width: 100%; height: 100%;"></div>
         <section class="overlay-text-secondary-node5">
           <p class="text-28" style="position: relative; top: -2em; font-family: 'Poppins', sans-serif;"><span class="text-rgb-183-171-152">HISTORY</span></p>
           <div class="node7-container">
@@ -565,7 +565,7 @@
 }
 
 body {
-  background-color: black;
+  background-color: #060606;
   cursor: default;
   font-family: 'Poppins', sans-serif;
 }
@@ -1826,7 +1826,57 @@ body {
     vector116Element.addEventListener('click', () => {
       window.open('https://www.linkedin.com/in/adarsh-kiran-narayanadas-28ab7165/', '_blank'); // Opens the URL in a new tab
     });
+
+
+
+    const text18ElementId = document.getElementById('text-18-hover'); 
+    const text17ElementId = document.getElementById('text-17-hover'); 
+    // Select all sections or elements you want to observe
+    const sections = document.querySelectorAll('.node-1, .node-2, .node-3, .node-4, .node-5, .node-6, .node-7');
+
+    const observerOptions = {
+      root: null, // Use the viewport as the root
+      rootMargin: '0px',
+      threshold: 0.5 // Trigger when 50% of the element is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          console.log('Currently in view:', entry.target.className);
+
+          if(entry.target.className === 'node-4' || 
+          entry.target.className === 'node-5' || 
+          entry.target.className === 'node-6' || 
+          entry.target.className === 'node-7'){
+            text18ElementId.style.color = '#b7ab98';
+          } else {
+            text18ElementId.style.color = '#373737';
+          }
+
+          if(entry.target.className === 'node-1' || 
+          entry.target.className === 'node-2'|| entry.target.className === 'node-3'){
+            text17ElementId.style.color = '#b7ab98';
+          } else {
+            text17ElementId.style.color = '#373737';  
+          }
+
+         /* if(entry.target.className === 'node-4'){
+            text18ElementId.style.color = '#b7ab98';
+          } else {
+            text18ElementId.style.color = '#33737';
+          }*/
+          // You can add logic here to highlight the current section or update the UI
+        }
+      });
+    }, observerOptions);
+
+    // Observe each section
+    sections.forEach(section => {
+      observer.observe(section);
+    });
     
   </script>
+  
 </body>
 </html>
