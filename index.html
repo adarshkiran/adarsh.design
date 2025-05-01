@@ -23,13 +23,25 @@
                 <img src="images/image-2-13.png" class="image-2-13" alt="image-2" />
                 <div class="overlay"></div>
                 <div class="content-overlay">
-                    <p class="overlay-text-secondary text-16">
-                        <span class="overlay-text">ADARSH KIRAN NARAYANADAS</span><br>
-                        <span class="text-rgb-183-171-152 hover-target">Crafting</span><br>
-                        <span class="text-rgb-255-98-0">creative things</span><br>
-                        <span class="text-rgb-183-171-152">since</span><br>
-                        <span class="text-rgb-183-171-152">2011</span>
-                    </p>
+                        <div class="mask-text-node1" id="mask-text-node1" aria-hidden="true">
+                            <p id="hover-text overlay-text-secondary text-16" tabindex="0">
+                                <span class="name overlay-text">ADARSH KIRAN NARAYANADAS</span><br>
+                                <span>Making</span><br>
+                                <span>art since</span><br>
+                                <span>I couldn't</span><br>
+                                <span>spell it</span><br>
+                                <span>yet</span>
+                            </p>
+                        </div>
+                    <div class="orginal-text-node1" id="orginal-text-node1"></div>
+                        <p class="overlay-text-secondary text-16" id="crafting-text">
+                            <span class="overlay-text">ADARSH KIRAN NARAYANADAS</span><br>
+                            <span class="text-rgb-183-171-152 hover-target">Crafting</span><br>
+                            <span class="text-rgb-255-98-0">creative things</span><br>
+                            <span class="text-rgb-183-171-152">since</span><br>
+                            <span class="text-rgb-183-171-152">2011</span>
+                        </p>
+                    </div>
                     <section class="fixed-content">
                         <div class="corner-icon-wrapper">
                             <img src="images/AdarshLogo.svg" class="corner-icon" alt="corner-icon" />
@@ -342,6 +354,131 @@
 
     </div>
 
+   
+
+    <style>
+        /*circle animation*/
+        .main-text-node1 {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+    .mask-text-node1, .orginal-text-node1 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #afa18f;
+        line-height: 1.2;
+        cursor: default;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .mask-text-node1 p, .orginal-text-node1 p {
+        width: 56vw;
+        padding: 50px 40px;
+        transition: all 0.3s ease;
+        text-align: left;
+        font-size: 7vw;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: -5px;
+        line-height: 85%;
+        height: 86%;
+    }
+
+    .mask-text-node1 p {
+        position: relative;
+        z-index: 2;
+    }
+
+    .orginal-text-node1 {
+        position: relative; /* Ensure it is positioned relative to its container */
+        z-index: 10; /* Increase z-index to bring it above other elements */
+    }
+
+    .orginal-text-node1 p {
+        margin: 0; /* Remove any default margin */
+        padding: 20px; /* Add padding to ensure it is not too close to the edges */
+    }
+
+    .mask-text-node1 p:hover {
+        transform: scale(1.02);
+        font-size: 1.2vw;
+        font-weight: 200;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 0.2vw;
+        line-height: 85%;
+    }
+
+    .name {
+        font-size: 1.2vw;
+        font-weight: 300;
+        letter-spacing: 0.2vw;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+        line-height: 85%;
+    }
+
+    .orginal-text-node1 span {
+        color: #ff6200;
+        font-weight: 300;
+        letter-spacing: 0.3vw;
+        font-size: 1.2vw;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .mask-text-node1 {
+        position: absolute;
+        top: -1.2vw;
+        color: #141516;
+        background: #ff6200;
+        clip-path: circle(0 at 0 0);
+        will-change: transform;
+        transition: clip-path 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        pointer-events: none;
+        z-index: 1;
+        height: 103%;
+        left: -0.58vw;
+    }
+
+    /* Add a subtle glow effect */
+    .mask-text-node1::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at center, rgba(236, 78, 57, 0.2) 0%, transparent 70%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .mask-text-node1:hover::before {
+        opacity: 1;
+    }
+
+    #hover-text-node1 {
+        pointer-events: auto;
+        position: relative;
+        z-index: 2;
+        text-align: left;
+        font-size: 7vw;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: -11px;
+        line-height: 85%;
+    } 
+    </style>
 
 
 
@@ -447,7 +584,7 @@
             left: 0;
             width: 100%;
             height: 115%;
-            background-color: rgba(5, 0, 0, 0.6);
+            background-color: rgba(0, 0, 0, 0.7);
             pointer-events: none;
         }
 
@@ -458,6 +595,17 @@
             left: 25%;
             transform: translate(-50%, -50%);
             color: #b7ab98;
+            font-size: 1vw;
+            letter-spacing: 0.39em;
+            font-weight: 400;
+        }
+
+        .name.overlay-text  {
+            position: absolute;
+            top: 6.3vw;
+            left: 26%;
+            transform: translate(-50%, -50%);
+            color: #141516;
             font-size: 1vw;
             letter-spacing: 0.39em;
             font-weight: 400;
@@ -691,7 +839,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-        }
+        } 
 
         .circle-text {
             color: #ff6200;
@@ -2053,6 +2201,7 @@
                 }
             }
         }
+        
     </style>
 
     <div class="circle">
@@ -2404,6 +2553,89 @@
         });
 
     </script>
+
+<script>
+    //circle animation
+    const mask = document.getElementById('mask-text-node1');
+    const hoverText = document.getElementById('crafting-text');
+    //const hoverText = document.getElementById('orginal-text-node1');
+    let isHovered = false;
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetSize = 20;
+    let currentSize = 20;
+    let animationFrame;
+
+    // Smooth size interpolation
+    function lerp(start, end, factor) {
+        return start + (end - start) * factor;
+    }
+
+    // Update mouse position with requestAnimationFrame for smooth animation
+    function updateMaskPosition() {
+        // Smooth size update
+        currentSize = lerp(currentSize, targetSize, 0.1);
+        
+        // Update clip-path with centered position
+        mask.style.clipPath = `circle(${currentSize}px at ${mouseX}px ${mouseY}px)`;
+
+        
+        animationFrame = requestAnimationFrame(updateMaskPosition);
+    }
+
+    // Update mouse position
+    document.addEventListener('mousemove', (e) => {
+        // Get the position relative to the viewport
+        mouseX = e.clientX;
+        mouseY = e.clientY + window.scrollY; // Adjust for scroll position
+        
+        if (!animationFrame) {
+            updateMaskPosition();
+        }
+    });
+
+    // Handle hover state
+    hoverText.addEventListener('mouseenter', () => {
+        isHovered = true;
+        targetSize = 300;
+    });
+
+    hoverText.addEventListener('mouseleave', () => {
+        isHovered = false;
+        targetSize = 20;
+    });
+
+    // Initialize mask position
+    function initMask() {
+        const rect = hoverText.getBoundingClientRect();
+        mouseX = rect.left + rect.width / 2;
+        mouseY = rect.top + rect.height / 2;
+        updateMaskPosition();
+    }
+
+    // Initialize on load
+    window.addEventListener('load', initMask);
+
+    // Clean up animation frame when leaving the page
+    window.addEventListener('beforeunload', () => {
+        if (animationFrame) {
+            cancelAnimationFrame(animationFrame);
+        }
+    }); 
+    
+</script>
+
+<script>
+    const nde1ele = document.querySelector('.node-1');
+
+    nde1ele.addEventListener('mouseenter', () => {
+        circleElement.style.display = 'none';
+    });
+
+    nde1ele.addEventListener('mouseleave', () => {
+        circleElement.style.display = 'block';
+    });
+</script>
 
 </body>
 </html>
