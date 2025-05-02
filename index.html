@@ -398,7 +398,7 @@
     .orginal-text-node1 {
         position: relative; /* Ensure it is positioned relative to its container */
         z-index: 10; /* Increase z-index to bring it above other elements */
-        height: 34vw;
+		height: 34vw;
         width: 36vw;
         left: -9vw;
         top: 8vw;
@@ -450,6 +450,7 @@
         pointer-events: none;
         z-index: 1;
         height: 103%;
+        left: -0.58vw;
     }
 
     /* Add a subtle glow effect */
@@ -2292,10 +2293,10 @@
          });*/
 
         // Apply hover effect to each text element
-      //  applyHoverEffect(craftingText);
-      ////  applyHoverEffect(creativeText);
-      //  applyHoverEffect(sinceText);
-      //  applyHoverEffect(yearText);
+        applyHoverEffect(craftingText);
+        applyHoverEffect(creativeText);
+        applyHoverEffect(sinceText);
+        applyHoverEffect(yearText);
 
         function applyParallaxEffect(elementSelector, movement, hoverImageSrc, originalImageSrc) {
             const element = document.querySelector(elementSelector);
@@ -2560,7 +2561,6 @@
 <script>
     //circle animation
     const mask = document.getElementById('mask-text-node1');
-   //const hoverText = document.querySelector('.text-rgb-183-171-152');
     //const hoverText = document.getElementById('crafting-text');
     const hoverText = document.getElementById('orginal-text-node1');
     let isHovered = false;
@@ -2638,17 +2638,6 @@
 
     nde1ele.addEventListener('mouseleave', () => {
         circleElement.style.display = 'block';
-    });
-
-
-    const nde2ele = document.querySelector('.node-2');
-
-    nde2ele.addEventListener('mouseenter', () => {
-        mask.style.display = 'none';
-    });
-
-    nde2ele.addEventListener('mouseleave', () => {
-        mask.style.display = 'block';
     });
 </script>
 
