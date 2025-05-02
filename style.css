@@ -361,6 +361,7 @@ img {
   text-decoration: none;
   text-transform: uppercase;
   color: var(--text-rgb-183-171-152);
+  font-weight: 200;
 }
 
 .text-29 {
