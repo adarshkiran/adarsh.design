@@ -236,9 +236,20 @@
                 <img src="images/MyMottoBG.png" class="fourthImage" alt="fourthImage" />
                 <div class="overlay-node9"></div>
                 <section class="overlay-text-secondary-node9">
-                    <p class="text-28-node9" style="position: relative; top: -2em; font-family: 'Poppins', sans-serif;"><span class="text-rgb-183-171-152">my motto</span></p>
-                    <p class="text-27-node9" data-bg-color="#312d26" data-fg-color="#b7ab98">
-                        <span class="text-rgb-183-171-152-1-node9" style="margin-top: 3%;">Design is intelligence made visible.</span>
+                    <p class="text-28-node9" style="position: relative; top: -4em; font-family: 'Poppins', sans-serif;"><span class="text-rgb-183-171-152">my motto</span></p>
+                    <p class="text-27-node9 w1" data-bg-color="#312d26" data-fg-color="#b7ab98">
+                        <span class="text-rgb-183-171-152-1-node9" style="margin-top: 3%;">Learning never exhausts the mind</span>
+                        <span class="caption-node9">Leonardo da Vinci</span>
+                    </p>
+                    <p class="text-27-node9 w2" data-bg-color="#312d26" data-fg-color="#b7ab98">
+                        <span class="text-rgb-183-171-152-1-node9" style="margin-top: 3%;">Good design is good business</span>
+
+                        <span class="caption-node9">Thomas Watson Jr</span>
+                    </p>
+                    
+                     <p class="text-27-node9 w3" data-bg-color="#312d26" data-fg-color="#b7ab98">
+                        <span class="text-rgb-183-171-152-1-node9" style="margin-top: 3%;">Die with memories Not dreams</span>
+                        <span class="caption-node9">Leonardo da Vinci</span>
                     </p>
                 </section>
             </div>
@@ -2043,7 +2054,7 @@
 
         .overlay-text-secondary-node9 {
             position: absolute;
-            top: 25.5vw;
+            top: 20.5vw;
             left: 43.2%;
             transform: translate(-50%, -50%);
             font-size: 2vw;
@@ -2058,9 +2069,11 @@
             left: 0.2vw;
         }
 
-        .text-27-node9 {
-            margin: 0 auto;
-            max-width: 100%;
+        
+        .caption-node9 {
+            font-size: 1.4vw;
+            color: #b7ab98;
+            margin-left: 0.5vw;
         }
 
         .text-rgb-183-171-152-1-node9 {
@@ -2072,6 +2085,7 @@
             text-transform: uppercase;
             font-weight: 600;
             letter-spacing: -.060em;
+            width: 30vw;
             /* Media queries for node-9 */
             @media (max-width: 768px) {
                 .overlay-text-secondary-node9 {
@@ -2087,6 +2101,8 @@
                     font-size: 2.5vw;
                 }
             }
+
+
 
             @media (max-width: 480px) {
                 .overlay-text-secondary-node9 {
@@ -2613,67 +2629,78 @@
 
 
 <style>
-    .text-27-node9 {
-        transform: translateY(100%); /* Initially hide the text by moving it off-screen */
-        opacity: 0; /* Hide the text initially */
+   
+
+   .text-27-node9 { 
+        opacity:0;
+        position:absolute;
+        top:40%;
+   }
+
+   .w1 {
+        animation: w1anim 20s infinite;
     }
 
-    .text-27-node4 {
-        transform: translateY(100%); /* Initially hide the text by moving it off-screen */
-        opacity: 0; /* Hide the text initially */
+    .w2 {
+        animation: w2anim 20s infinite;
     }
 
-    .text-27-node6 {
-        transform: translateY(100%); /* Initially hide the text by moving it off-screen */
-        opacity: 0; /* Hide the text initially */
+    .w3 {
+        animation: w3anim 20s infinite;
+    }
+
+    @keyframes w1anim {
+        0% { opacity: 0; transform: translateY(20px); }
+        50% { opacity: 1; transform: translateY(0); }
+        100% { opacity: 0; transform: translateY(-20px); }
+    }
+
+   @keyframes w1anim {
+        0%{
+            opacity: 0; 
+            transform: translateY(20px);
+        }
+        16%{
+            opacity: 1;
+            transform: translateY(0);
+        }
+        32% {
+            opacity:0;
+            transform: translateY(-20px);
+        }
+    }
+
+
+    @keyframes w2anim {
+        32%{
+            opacity: 0;
+        }
+        48%{
+            opacity: 1;
+            transform: translateY(0);
+        }
+        64% {
+            opacity:0;
+            transform: translateY(-20px);
+        }
+    }
+
+    @keyframes w3anim {
+        64%{
+            opacity: 0;
+        }
+        80%{
+            opacity: 1;
+            transform: translateY(0);
+        }
+        100% {
+            opacity:0;
+            transform: translateY(-20px);
+        }
     }
 
 </style>
 
-<script>
-    // Function to apply animation to elements with a given class
-    function applyAnimationToClass(className) {
-        const elements = document.querySelectorAll(`.${className}`);
-        elements.forEach(element => {
-            console.log('Element selected:', element);
-
-            // Create a GSAP timeline for the animation
-            const tl = gsap.timeline({ paused: true });
-            tl.to(element, {
-                y: 0,
-                opacity: 1, // Fade in the text
-                duration: 3,
-                ease: "power4.out",
-                stagger: {
-                    amount: 0.3
-                }
-            });
-
-            // Optionally, trigger the animation when the element is in view
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.5
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        console.log('Element is in view, playing animation');
-                        tl.play(); // Play the animation when the element is in view
-                    }
-                });
-            }, observerOptions);
-
-            observer.observe(element);
-        });
-    }
-
-    // Apply animation to elements with the specified classes
-    applyAnimationToClass('text-27-node9');
-    applyAnimationToClass('text-27-node4');
-    applyAnimationToClass('text-27-node6');
-</script>
 
 </body>
 </html>
