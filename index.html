@@ -2390,8 +2390,10 @@
 
     <script>
         const text18Element = document.querySelector('.text-18');
+        const text19Element = document.querySelector('.text-19');
         const text17Element = document.querySelector('.text-17');
         const node4Element = document.querySelector('.node-4');
+        const node10Element = document.querySelector('.node-10');
         const node2Element = document.querySelector('.node-2');
         const profileIconElement = document.querySelector('.corner-icon');
         const node1Element = document.querySelector('.node-1');
@@ -2414,6 +2416,10 @@
 
         profileIconElement.addEventListener('click', () => {
             node1Element.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        text19Element.addEventListener('click', () => {
+            node10Element.scrollIntoView({ behavior: 'smooth' });
         });
 
 
@@ -2602,6 +2608,72 @@
         }
     }
 </style>
+
+
+
+
+<style>
+    .text-27-node9 {
+        transform: translateY(100%); /* Initially hide the text by moving it off-screen */
+        opacity: 0; /* Hide the text initially */
+    }
+
+    .text-27-node4 {
+        transform: translateY(100%); /* Initially hide the text by moving it off-screen */
+        opacity: 0; /* Hide the text initially */
+    }
+
+    .text-27-node6 {
+        transform: translateY(100%); /* Initially hide the text by moving it off-screen */
+        opacity: 0; /* Hide the text initially */
+    }
+
+</style>
+
+<script>
+    // Function to apply animation to elements with a given class
+    function applyAnimationToClass(className) {
+        const elements = document.querySelectorAll(`.${className}`);
+        elements.forEach(element => {
+            console.log('Element selected:', element);
+
+            // Create a GSAP timeline for the animation
+            const tl = gsap.timeline({ paused: true });
+            tl.to(element, {
+                y: 0,
+                opacity: 1, // Fade in the text
+                duration: 3,
+                ease: "power4.out",
+                stagger: {
+                    amount: 0.3
+                }
+            });
+
+            // Optionally, trigger the animation when the element is in view
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        console.log('Element is in view, playing animation');
+                        tl.play(); // Play the animation when the element is in view
+                    }
+                });
+            }, observerOptions);
+
+            observer.observe(element);
+        });
+    }
+
+    // Apply animation to elements with the specified classes
+    applyAnimationToClass('text-27-node9');
+    applyAnimationToClass('text-27-node4');
+    applyAnimationToClass('text-27-node6');
+</script>
 
 </body>
 </html>
