@@ -358,6 +358,33 @@
 
 
 
+      
+
+       // CREATIVE : Split Lines
+        const tl5 = gsap.timeline({ paused: true });
+        tl5.to(".text-rgb-255-98-0 .line-inner", {
+            y: 0,
+            duration: 1.2,
+            ease: "power4.out",
+            stagger: {
+            amount: 0.3
+            }
+        });
+
+        tl5.restart();
+
+        // SINCE: Split Lines
+        const tl6 = gsap.timeline({ paused: true });
+        tl6.to(".text-rgb-183-171-152 .line-inner", {
+            y: 0,
+            duration: 1.2,
+            ease: "power4.out",
+            stagger: {
+            amount: 0.3
+            }
+        });
+
+        tl6.restart();
 
 
 

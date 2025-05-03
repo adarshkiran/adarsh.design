@@ -37,10 +37,12 @@
                     <div class="orginal-text-node1" id="orginal-text-node1"></div>
                         <p class="overlay-text-secondary text-16" id="crafting-text">
                                 <span class="overlay-text">ADARSH KIRAN NARAYANADAS</span><br>
-                                <span class="text-rgb-183-171-152 hover-target">Crafting</span><br>
-                                <span class="text-rgb-255-98-0">creative things</span><br>
-                                <span class="text-rgb-183-171-152">since</span><br>
-                                <span class="text-rgb-183-171-152">2011</span>
+                               <span class="text-rgb-183-171-152 hover-target"><span class="line-inner"> Crafting </span></span>
+                                <span class="text-rgb-255-98-0"><span class="line-inner"> creative </span></span>
+                                <span class="text-rgb-255-98-0"><span class="line-inner"> things </span></span>
+                                <span class="text-rgb-183-171-152"><span class="line-inner">since</span></span>
+                                <span class="text-rgb-183-171-152"><span class="line-inner">2011</span></span>
+
                             </p>
                         </div>
                     <section class="fixed-content">
@@ -342,6 +344,31 @@
         position: relative;
         z-index: 2;
     }
+
+    /* Style 5: Split Lines */
+        .text-16 .text-rgb-255-98-0 {
+            display: block;
+            overflow: hidden;
+            margin-bottom: 0.2em;
+        }
+
+        .text-16 .hover-target {
+            display: block;
+            overflow: hidden;
+            margin-bottom: 0.2em;
+        }
+
+        .text-16 .text-rgb-183-171-152 {
+            display: block;
+            overflow: hidden;
+            margin-bottom: 0.2em;
+        }
+
+        .text-16 .line-inner {
+            display: block;
+            transform: translateY(100%);
+        }
+
 
     .orginal-text-node1 {
         position: relative; /* Ensure it is positioned relative to its container */
