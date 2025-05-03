@@ -9,8 +9,8 @@
         const ballIcon = document.querySelector('.vector-113');
         const Menu = document.querySelector('.top-right-text');
         const creativeIndustryText = document.querySelector('.text-rgb-255-98-0-1');
-        // const node7CircleElement = document.querySelector('.node7-container');
-        //const circleTextElement = document.querySelector('.circle-text');
+        const node7CircleElement = document.querySelector('.work-top-container-node8');
+        const circleTextElement = document.querySelector('.circle-text');
 
         const mouse = { x: 0, y: 0 },
             circle = { x: 0, y: 0 };
@@ -63,11 +63,12 @@
 
         //blackcircle
 
-        /* node7CircleElement.addEventListener('mouseenter', () => {
+         node7CircleElement.addEventListener('mouseenter', () => {
              console.log('Mouse entered:', node7CircleElement);
              circleElement.style.width = '120px'; // New size on hover
              circleElement.style.height = '120px';
              circleElement.style.backgroundColor = 'black';
+             circleElement.style.opacity = '0.9';
              circleTextElement.style.display = 'block'; // Show text
          });
 
@@ -76,7 +77,7 @@
              circleElement.style.height = '40px';
              circleElement.style.backgroundColor = '#ff6200';
              circleTextElement.style.display = 'none'; // Hide text
-         });*/
+         });
 
         // Apply hover effect to each text element
         //applyHoverEffect(craftingText);
