@@ -221,25 +221,140 @@
 
         requestAnimationFrame(raf)
 
-        // text-34 hover effect
+        // what i do hover effect
 
         //gsap.registerPlugin(ScrollTrigger);
 
-        //const text34Elements = gsap.utils.toArray('.text-34');
+        const text34Elements = gsap.utils.toArray('.work-top-text');
 
-        // textElements.forEach(text => {
-        // gsap.to(text, {
-        //   backgroundSize: '100%',
-        //   ease: 'none',
-        //   scrollTrigger: {
-        //     trigger: text,
-        //     start: 'center 80%',
-        //    end: 'center 20%',
-        //     markers: false,
-        //    scrub: true,
-        //   },
-        // });
-        //});
+        text34Elements.forEach((element) => {
+            const text = new SplitType(element, { types: 'chars' });
+
+            gsap.fromTo(text.chars,
+                { opacity: 0.20, y: 2 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    stagger: 0.5,
+                    scrollTrigger: {
+                        trigger: element,
+                        start: 'top 80%',
+                        end: 'top 30%',
+                        scrub: true,
+                        markers: false,
+                        toggleActions: 'play none none reverse'
+                    }
+                }
+            );
+        });
+
+
+        
+        const lenis1 = new Lenis()
+
+        lenis1.on('scroll', (e) => {
+            console.log(e)
+
+        })
+
+        function raf(time) {
+            lenis1.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+
+
+
+        // experienceElements hover effect
+
+        //gsap.registerPlugin(ScrollTrigger);
+
+        const experienceElements = gsap.utils.toArray('.overlay-text-secondary-node4');
+
+        experienceElements.forEach((element) => {
+            const text = new SplitType(element, { types: 'words' });
+
+            gsap.fromTo(text.words,
+                { opacity: 0.20, y: 2 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    stagger: 0.5,
+                    scrollTrigger: {
+                        trigger: element,
+                        start: 'top 80%',
+                        end: 'top 30%',
+                        scrub: true,
+                        markers: false,
+                        toggleActions: 'play none none reverse'
+                    }
+                }
+            );
+        });
+
+
+        
+        const lenis2 = new Lenis()
+
+        lenis2.on('scroll', (e) => {
+            console.log(e)
+
+        })
+
+        function raf(time) {
+            lenis2.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+
+
+        // experienceElements hover effect
+
+        //gsap.registerPlugin(ScrollTrigger);
+
+        const artistSectionElements = gsap.utils.toArray('.text-27-node6');
+
+        artistSectionElements.forEach((element) => {
+            const text = new SplitType(element, { types: 'words' });
+
+            gsap.fromTo(text.words,
+                { opacity: 0.20, y: 2 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    stagger: 0.5,
+                    scrollTrigger: {
+                        trigger: element,
+                        start: 'top 80%',
+                        end: 'top 30%',
+                        scrub: true,
+                        markers: false,
+                        toggleActions: 'play none none reverse'
+                    }
+                }
+            );
+        });
+
+
+        
+        const lenis3 = new Lenis()
+
+        lenis3.on('scroll', (e) => {
+            console.log(e)
+
+        })
+
+        function raf(time) {
+            lenis3.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
 
 
 
@@ -356,8 +471,8 @@
     let isHovered = false;
     let mouseX = 0;
     let mouseY = 0;
-    let targetSize = 20;
-    let currentSize = 20;
+    let targetSize = 0;
+    let currentSize = 0;
     let animationFrame;
 
     // Smooth size interpolation
@@ -395,7 +510,7 @@
 
     hoverText.addEventListener('mouseleave', () => {
         isHovered = false;
-        targetSize = 20;
+        targetSize = 0;
     });
 
     // Initialize mask position
