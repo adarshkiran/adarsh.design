@@ -18,6 +18,73 @@
     <script src="https://unpkg.com/split-type"></script>
 </head>
 <body>
+    <div id="loading-screen">
+        <div id="progress-ring" style="position: relative;">
+            <img src="images/Loading.gif" alt="Loading" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 150px; height: 150px; z-index: 1;" />
+            <svg width="500" height="500" style="position: relative; z-index: 2;">
+                <circle cx="250" cy="250" r="200" stroke="#333" stroke-width="3" fill="none" />
+                <circle id="progress" cx="250" cy="250" r="200" stroke="#b7ab98" stroke-width="3" fill="none" stroke-dasharray="1256.6" stroke-dashoffset="1256.6" />
+            </svg>
+        </div>
+       
+    </div>
+
+    <style>
+    #loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0D0D0D;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        color: #b7ab98;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #progress-ring {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    #progress {
+        transition: stroke-dashoffset 0.5s;
+    }
+
+    #loading-text {
+        font-size: 1.5em;
+    }
+
+    .Main-container {
+        display: none;
+    }
+    </style>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let progress = document.getElementById('progress');
+        let loadingScreen = document.getElementById('loading-screen');
+        let offset = 1256.6;
+        let interval = setInterval(function() {
+            if (offset <= 0) {
+                clearInterval(interval);
+                loadingScreen.style.display = 'none'; // Hide loading screen
+                document.querySelector('.Main-container').style.display = 'block'; // Show main content
+                tl5.restart();
+                tl6.restart();
+            } else {
+                offset -= 12.566; // Decrease offset to simulate progress
+                progress.style.strokeDashoffset = offset;
+            }
+        }, 30); // Adjust the speed of the loading animation
+    });
+    </script>
+
     <div class="Main-container">
         <div class="node-1">
             <div class="image-container">
