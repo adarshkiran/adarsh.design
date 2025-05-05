@@ -531,8 +531,9 @@
 
     // Handle hover state
     hoverText.addEventListener('mouseenter', () => {
+        const screenWidth = window.screen.width;
         isHovered = true;
-        targetSize = 300;
+        targetSize = screenWidth/5;
     });
 
     hoverText.addEventListener('mouseleave', () => {
