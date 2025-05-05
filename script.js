@@ -531,7 +531,6 @@
 
     // Handle hover state
     hoverText.addEventListener('mouseenter', () => {
-        alert("screen width is : " +window.screen.width);
         const screenWidth = window.screen.width;
         isHovered = true;
         targetSize = screenWidth/5;
