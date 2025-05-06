@@ -239,8 +239,8 @@
                     stagger: 0.5,
                     scrollTrigger: {
                         trigger: element,
-                        start: 'top 80%',
-                        end: 'top 30%',
+                        start: 'top 95%',
+                        end: 'top 65%',
                         scrub: true,
                         markers: false,
                         toggleActions: 'play none none reverse'
