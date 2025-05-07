@@ -533,7 +533,7 @@
     hoverText.addEventListener('mouseenter', () => {
         const screenWidth = window.screen.width;
         isHovered = true;
-        targetSize = screenWidth/5;
+        targetSize = screenWidth/8;
     });
 
     hoverText.addEventListener('mouseleave', () => {
