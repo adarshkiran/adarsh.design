@@ -879,7 +879,7 @@
 
 
         .corner-icon {
-            width: 100%;
+            width: 100%; 
             height: 100%;
         }
 
@@ -2127,6 +2127,13 @@
             pointer-events: none;
         }
 
+        .top-right-text {
+            position: fixed;
+            top: 4vw; /* Adjust as needed */
+            right: 4vw; /* Moved 100px towards the left */
+            text-align: right;
+        }
+
         .top-right-text p {
             margin: 0;
             color: white;
@@ -2262,7 +2269,7 @@
         .overlay-text-secondary-node5 {
             position: absolute;
             top: 88vw;
-            left: 30.5%;
+            left: 61.5%;
             transform: translate(-50%, -50%);
             font-size: 6vw;
             width: 100%;
@@ -2270,15 +2277,16 @@
 
         .text-28 {
             flex-grow: 0;
-            flex-shrink: 1;
+    flex-shrink: 1;
             flex-basis: auto;
             font-size: 3vw;
             letter-spacing: 5px;
             text-decoration: none;
             text-transform: uppercase;
+            color: var(--text-rgb-183-171-152);
             font-weight: 200;
             top: 0em;
-            left: -6vw;
+            left: 0vw;
         }
 
         .history-item {
@@ -2365,6 +2373,77 @@
             left: 47.7%;
             transform: translate(-50%, -50%);
             width: 70%
+        }
+
+        .node-2 .overlay-text-secondary-node2 {
+            position: absolute;
+            top: 90vw;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 6vw;
+            width: 90%;
+        }
+
+        .work-top-hover {
+            position: absolute;
+            letter-spacing: -.060em;
+            width: 100%;
+            height: 100%;
+            background-color: #FF6200;
+            color: #0D0D0D;
+            clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+            transform-origin: center;
+            transition: all cubic-bezier(.1,.5,.5,1) 0.4s;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            left: -6.4%;
+            font-size: 5.5vw;
+            font-weight: 600;
+            text-align: left;
+            padding-left: 20.5%;
+            text-transform: uppercase;
+        }
+
+        .node-8 .work-top-hover {
+            position: absolute;
+            letter-spacing: -.060em;
+            width: 100%;
+            height: 100%;
+            background-color: #FF6200;
+            color: #0D0D0D;
+            clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+            transform-origin: center;
+            transition: all cubic-bezier(.1,.5,.5,1) 0.4s;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            left: -8.4%;
+            font-size: 5vw;
+            font-weight: 600;
+            text-align: left;
+            padding-left: 20.5%;
+            text-transform: uppercase;
+        }
+
+        .history-hover {
+            position: absolute;
+            letter-spacing: -.060em;
+            width: 100%;
+            height: 100%;
+            background-color: #FF6200;
+            color: #0D0D0D;
+            clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+            transform-origin: center;
+            transition: all cubic-bezier(.1,.5,.5,1) 0.4s;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            left: 0.9%;
+            font-size: 2.5vw;
+            font-weight: 600;
+            text-align: left;
+            padding-left: 20.5%;
         }
         
     }
