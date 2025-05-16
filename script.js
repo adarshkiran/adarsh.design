@@ -558,4 +558,23 @@
             cancelAnimationFrame(animationFrame);
         }
     }); 
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+        let progress = document.getElementById('progress');
+        let loadingScreen = document.getElementById('loading-screen');
+        let offset = 1256.6;
+        let interval = setInterval(function() {
+            if (offset <= 0) {
+                clearInterval(interval);
+                loadingScreen.style.display = 'none'; // Hide loading screen
+                document.querySelector('.Main-container').style.display = 'block'; // Show main content
+                tl5.restart();
+                tl6.restart();
+            } else {
+                offset -= 12.566; // Decrease offset to simulate progress
+                progress.style.strokeDashoffset = offset;
+            }
+        }, 30); // Adjust the speed of the loading animation
+    });
     
