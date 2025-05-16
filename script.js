@@ -358,36 +358,6 @@
 
 
 
-      
-
-       // CREATIVE : Split Lines
-        const tl5 = gsap.timeline({ paused: true });
-        tl5.to(".text-rgb-255-98-0 .line-inner", {
-            y: 0,
-            duration: 1.2,
-            ease: "power4.out",
-            stagger: {
-            amount: 0.3
-            }
-        });
-
-        tl5.restart();
-
-        // SINCE: Split Lines
-        const tl6 = gsap.timeline({ paused: true });
-        tl6.to(".text-rgb-183-171-152 .line-inner", {
-            y: 0,
-            duration: 1.2,
-            ease: "power4.out",
-            stagger: {
-            amount: 0.3
-            }
-        });
-
-        tl6.restart();
-
-
-
         const text18Element = document.querySelector('.text-18');
         const text19Element = document.querySelector('.text-19');
         const text17Element = document.querySelector('.text-17');
@@ -569,8 +539,33 @@
                 clearInterval(interval);
                 loadingScreen.style.display = 'none'; // Hide loading screen
                 document.querySelector('.Main-container').style.display = 'block'; // Show main content
-                tl5.restart();
-                tl6.restart();
+                
+                // CREATIVE : Split Lines
+                const effectOnCreative = gsap.timeline({ paused: true });
+                effectOnCreative.to(".text-rgb-255-98-0 .line-inner", {
+                    y: 0,
+                    duration: 1.2,
+                    ease: "power4.out",
+                    stagger: {
+                    amount: 0.3
+                    }
+                });
+
+                effectOnCreative.restart();
+
+                // SINCE: Split Lines
+                const SinceEffect = gsap.timeline({ paused: true });
+                SinceEffect.to(".text-rgb-183-171-152 .line-inner", {
+                    y: 0,
+                    duration: 1.2,
+                    ease: "power4.out",
+                    stagger: {
+                    amount: 0.3
+                    }
+                });
+
+                SinceEffect.restart();
+                
             } else {
                 offset -= 12.566; // Decrease offset to simulate progress
                 progress.style.strokeDashoffset = offset;
