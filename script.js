@@ -374,13 +374,18 @@
         const vector116Element = document.querySelector('.vector-116');
 
 
-
         text18Element.addEventListener('click', () => {
             node4Element.scrollIntoView({ behavior: 'smooth' });
+            text18ElementId.style.color = '#f2e3cc';
+            text17ElementId.style.color = '#8B806E';
+            text19ElementId.style.color = '#8B806E';
         });
 
         text17Element.addEventListener('click', () => {
             node2Element.scrollIntoView({ behavior: 'smooth' });
+            text17ElementId.style.color = '#f2e3cc';
+            text18ElementId.style.color = '#8B806E';
+            text19ElementId.style.color = '#8B806E';
         });
 
         profileIconElement.addEventListener('click', () => {
@@ -389,6 +394,9 @@
 
         text19Element.addEventListener('click', () => {
             node10Element.scrollIntoView({ behavior: 'smooth' });
+            text19ElementId.style.color = '#f2e3cc';
+            text18ElementId.style.color = '#8B806E';
+            text17ElementId.style.color = '#8B806E';
         });
 
 
@@ -428,31 +436,24 @@
                 if (entry.isIntersecting) {
                     console.log('Currently in view:', entry.target.className);
 
-                    if (entry.target.className === 'node-4' ||
-                        entry.target.className === 'node-5' ||
-                        entry.target.className === 'node-6' ||
-                        entry.target.className === 'node-7') {
-                        text18ElementId.style.color = '#f2e3cc';
-                    } else {
-                        text18ElementId.style.color = '#8B806E';
-                        text19ElementId.style.color = '#8B806E';
+                        switch (entry.target.className) {
+                            case 'node-1' || 'node-2' || 'node-3':
+                                text17ElementId.style.color = '#f2e3cc';
+                                text18ElementId.style.color = '#8B806E';
+                                text19ElementId.style.color = '#8B806E';
+                                break;
+                            case 'node-4' || 'node-5' || 'node-6' || 'node-7':
+                                text18ElementId.style.color = '#f2e3cc';
+                                text17ElementId.style.color = '#8B806E';
+                                text19ElementId.style.color = '#8B806E';
+                                break;
+                            case 'node-10':
+                                text19ElementId.style.color = '#f2e3cc';
+                                text18ElementId.style.color = '#8B806E';
+                                text17ElementId.style.color = '#8B806E';
+                                break;
+                        }
                     }
-
-                    if (entry.target.className === 'node-1' ||
-                        entry.target.className === 'node-2' || entry.target.className === 'node-3') {
-                        text17ElementId.style.color = '#f2e3cc';
-                    } else {
-                        text17ElementId.style.color = '#8B806E';
-                        text19ElementId.style.color = '#8B806E';
-                    }
-
-                    /* if(entry.target.className === 'node-4'){
-                       text18ElementId.style.color = '#b7ab98';
-                     } else {
-                       text18ElementId.style.color = '#33737';
-                     }*/
-                    // You can add logic here to highlight the current section or update the UI
-                }
             });
         }, observerOptions);
 
