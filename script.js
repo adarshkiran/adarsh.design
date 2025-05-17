@@ -577,4 +577,11 @@ document.addEventListener("DOMContentLoaded", function() {
 function scrollToNode10() {
     node10Element.scrollIntoView({ behavior: 'smooth' });
 }
-    
+
+function scrollToNode2() {
+    node2Element.scrollIntoView({ behavior: 'smooth' });
+}
+
+function scrollToNode4() {
+    node4Element.scrollIntoView({ behavior: 'smooth' });
+}
