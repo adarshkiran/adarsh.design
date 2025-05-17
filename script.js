@@ -372,6 +372,11 @@ const vector114Element = document.querySelector('.vector-114');
 const vector115Element = document.querySelector('.vector-115');
 const vector116Element = document.querySelector('.vector-116');
 
+//connect links
+//const vector113Element = document.querySelector('.vector-113');
+//const vector114Element = document.querySelector('.vector-114');
+//const vector115Element = document.querySelector('.vector-115');
+//const vector116Element = document.querySelector('.vector-116');
 
 text18Element.addEventListener('click', () => {
     node4Element.scrollIntoView({ behavior: 'smooth' });
@@ -588,6 +593,22 @@ function scrollToNode4() {
 
 function scrollToNode1() {
     node1Element.scrollIntoView({ behavior: 'smooth' });
+}
+
+function behance() {
+    window.open('https://www.behance.net/adarshkiran', '_blank');
+}
+
+function dribbble() {
+    window.open('https://dribbble.com/adarshkiran', '_blank');
+}
+
+function linkedin() {
+    window.open('https://www.linkedin.com/in/adarsh-kiran-narayanadas-28ab7165/', '_blank');
+}
+
+function instagram() {
+    window.open('https://www.instagram.com/adarshkiran89/', '_blank');
 }
 
 // Disable right-click context menu
