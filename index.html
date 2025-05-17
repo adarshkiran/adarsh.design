@@ -8,15 +8,16 @@
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">  
     <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/split-type"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@latest"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/split-type"></script>
+    
 </head>
+
 <body oncopy="return false" oncut="return false" onpaste="return false">
     <div id="loading-screen">
         <div id="progress-ring" style="position: relative;">
@@ -171,6 +172,7 @@
                         <span class="text-rgb-183-171-152-1">I'm an artist from India with over 13 years of</span>
                         <span class="text-rgb-255-98-0-1">creative industry experience.</span>
                         <span class="text-rgb-183-171-152-1" style="margin-top: 3%;">I hold a Bachelor of Fine Arts in Applied Arts. My goal is to turn business ideas into strong concepts and build user-friendly, high-quality digital experiences. I focus on creating innovative, intuitive, and visually appealing designs by using new styles and methods.</span><br>
+                        <span class="text-rgb-183-171-152-1" style="margin-top: 3%;">Apart from work I like to trek and explore the mountains.</span>
                         <span class="text-rgb-183-171-152-1" style="margin-top: 3%;">Apart from work I like to trek and explore the mountains.</span>
                     </p>
                 </section>
@@ -491,9 +493,8 @@
     </div>
 
     <div class="circle">
-        <span class="circle-text">explore</span>
+        <span class="circle-text">explore></span>
     </div>
-
 
 
     <script src="./script.js"></script>
@@ -4992,6 +4993,8 @@ body {
                 display: none;
             }
 
+           
+
             .image-container-node1-mobile {
                 display: block;
             }
@@ -5115,12 +5118,12 @@ body {
             }
 
             .top-right-text p {
-                margin: 5px;
                 color: white;
                 font-size: 3.5vw;
                 letter-spacing: 0em;
                 line-height: 3vw;
-                z-index: 10;
+                z-index: 100;
+                cursor: pointer;
             }
 
 
@@ -5769,13 +5772,20 @@ body {
             display: none;
             }
 
-}
+            .text-19 {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: auto;
+                font-size: 20px;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: var(--text-rgb-92-86-76);
+            }
 
-
+    }
 
 
 </style>
-
 
 </html>
 
