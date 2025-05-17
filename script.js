@@ -590,5 +590,10 @@ function scrollToNode1() {
     node1Element.scrollIntoView({ behavior: 'smooth' });
 }
 
+// Disable right-click context menu
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+});
+
 
 
