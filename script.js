@@ -616,18 +616,5 @@ document.addEventListener('contextmenu', function(event) {
     event.preventDefault();
 });
 
-// Disable long-press copy on mobile devices
-document.addEventListener('touchstart', function(event) {
-    event.preventDefault();
-});
-
-document.addEventListener('touchmove', function(event) {
-    event.preventDefault();
-});
-
-document.addEventListener('touchend', function(event) {
-    event.preventDefault();
-});
-
 
 
