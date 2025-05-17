@@ -585,3 +585,12 @@ function scrollToNode2() {
 function scrollToNode4() {
     node4Element.scrollIntoView({ behavior: 'smooth' });
 }
+
+
+const cornerIconWrapper = document.querySelector('.corner-icon-wrapper');
+
+cornerIconWrapper.addEventListener('click', () => {
+    node1Element.scrollIntoView({ behavior: 'smooth' });
+});
+
+
