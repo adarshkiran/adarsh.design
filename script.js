@@ -616,5 +616,14 @@ document.addEventListener('contextmenu', function(event) {
     event.preventDefault();
 });
 
+function artProjects() {
+    window.open('https://drive.google.com/drive/folders/1MkHgIam-pvmk0OBWsLD-Dt9BHElDUrp8?usp=sharing', '_blank');
+}
 
+function designProjects() {
+    window.open('https://drive.google.com/drive/folders/1XzF2Fvr6c1OjompdALP3VbcZnXj-GTUw?usp=sharing', '_blank');
+}
 
+function photographyProjects() {
+    window.open('https://drive.google.com/drive/folders/1V0Cwpq4sOi6dMKlbcoe2fdaZ8q1rBXSI?usp=sharing', '_blank');
+}
