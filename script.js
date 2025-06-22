@@ -617,11 +617,11 @@ document.addEventListener('contextmenu', function(event) {
 });
 
 function artProjects() {
-    window.open('https://drive.google.com/drive/folders/1MkHgIam-pvmk0OBWsLD-Dt9BHElDUrp8?usp=sharing', '_blank');
+    window.open('https://www.figma.com/deck/LKzdxBuhekaRAphFV49Ni9/Art?node-id=1-42&t=9iJfzLiXF3h3ozac-1', '_blank');
 }
 
 function designProjects() {
-    window.open('https://drive.google.com/drive/folders/1XzF2Fvr6c1OjompdALP3VbcZnXj-GTUw?usp=sharing', '_blank');
+    window.open('https://www.figma.com/proto/i7pXOSjM3bTNeGoV8XQVxq/Web-Portfolio--Design-?node-id=0-1&t=wvDADpDhO6C3Ifge-1', '_blank');
 }
 
 function photographyProjects() {
