@@ -625,5 +625,5 @@ function designProjects() {
 }
 
 function photographyProjects() {
-    window.open('https://drive.google.com/drive/folders/1V0Cwpq4sOi6dMKlbcoe2fdaZ8q1rBXSI?usp=sharing', '_blank');
+    window.open('https://www.figma.com/proto/i7pXOSjM3bTNeGoV8XQVxq/Web-Portfolio--Design-?node-id=52-2&t=CMOQpTD6pCDdZVpx-1', '_blank');
 }
