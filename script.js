@@ -621,9 +621,9 @@ function artProjects() {
 }
 
 function designProjects() {
-    window.open('https://www.figma.com/proto/i7pXOSjM3bTNeGoV8XQVxq/Web-Portfolio--Design-?node-id=0-1&t=wvDADpDhO6C3Ifge-1', '_blank');
+    window.open(' https://www.figma.com/proto/i7pXOSjM3bTNeGoV8XQVxq/Web-Portfolio--Design-?page-id=0%3A1&node-id=1-2&p=f&viewport=396%2C121%2C0.86&t=IYvnzjAD9YELwygh-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=1%3A2', '_blank');
 }
 
 function photographyProjects() {
-    window.open('https://www.figma.com/proto/i7pXOSjM3bTNeGoV8XQVxq/Web-Portfolio--Design-?node-id=52-2&t=CMOQpTD6pCDdZVpx-1', '_blank');
+    window.open('https://www.figma.com/proto/i7pXOSjM3bTNeGoV8XQVxq/Web-Portfolio--Design-?page-id=52%3A2&node-id=52-3&viewport=25%2C108%2C1.06&t=MQTwLkSj7exUHbNu-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=52%3A3', '_blank');
 }
