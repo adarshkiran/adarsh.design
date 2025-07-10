@@ -134,7 +134,7 @@ function applyParallaxEffect(elementSelector, movement, hoverImageSrc, originalI
 // Example usage:
 applyParallaxEffect('.corner-icon', 80, 'images/orangeIcons/AdarshlogoOrange.svg', 'images/AdarshLogo.svg');
 applyParallaxEffect('.vector-113', 40, 'images/orangeIcons/vector-113Org.svg', 'images/vector-113.svg');
-applyParallaxEffect('.vector-114', 30, 'images/orangeIcons/vector-114Org.svg', 'images/vector-114.svg');
+applyParallaxEffect('.vector-114', 30, 'images/orangeIcons/vector-112Org.svg', 'images/vector-112.svg');
 applyParallaxEffect('.vector-115', 30, 'images/orangeIcons/vector-115Org.svg', 'images/vector-115.svg');
 applyParallaxEffect('.vector-116', 30, 'images/orangeIcons/vector-116Org.svg', 'images/vector-116.svg');
 
@@ -409,7 +409,7 @@ vector113Element.addEventListener('click', () => {
 });
 
 vector114Element.addEventListener('click', () => {
-    window.open('https://www.instagram.com/adarshkiran89/', '_blank'); // Opens the URL in a new tab
+    window.open('https://www.figma.com/proto/i7pXOSjM3bTNeGoV8XQVxq/Web-Portfolio--Design-?page-id=0%3A1&node-id=1-2&p=f&viewport=396%2C121%2C0.86&t=IYvnzjAD9YELwygh-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=1%3A2', '_blank'); // Opens the URL in a new tab
 });
 
 vector115Element.addEventListener('click', () => {
